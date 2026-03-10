@@ -1,59 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="Skystorm\logo.png" alt="SkyStorm Logo" width="300">
 </p>
 
-## About Laravel
+# ⚡ SkyStorm
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**SkyStorm** est une réplique allégée de **Twitter/X** développée avec **Laravel 12** dans un contexte pédagogique pour la préparation à l’épreuve **E6 du BTS SIO option SLAM**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Le projet est construit en direct avec la classe afin d’illustrer **un cycle complet de développement web** :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- conception
+- modélisation
+- implémentation
+- déploiement
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+# 🎯 Objectifs pédagogiques
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Comprendre l’architecture **MVC de Laravel**
+- Manipuler l’**authentification avec Laravel UI (Bootstrap)**
+- Concevoir un **MCD** et le traduire en **base de données relationnelle**
+- Gérer les relations **1-N et N-N avec Eloquent**
+- Implémenter des **fonctionnalités sociales**
+- Structurer un projet **Git professionnel**
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# 🛠 Stack technique
 
-### Premium Partners
+- **PHP 8.x**
+- **Laravel 12**
+- **Laravel UI (Bootstrap)**
+- **MySQL / MariaDB**
+- **Eloquent ORM**
+- **Blade**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+# 🚀 Fonctionnalités principales
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Inscription / connexion utilisateur
+- Création de posts
+- Modification et suppression de posts
+- Système de **suivi entre utilisateurs**
+- Système de **likes**
+- **Fil d’actualité simplifié**
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# 🗄 Modélisation des données
 
-## Security Vulnerabilities
+Le modèle de données repose principalement sur deux entités :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Users**
+- **Posts**
 
-## License
+avec des relations sociales entre utilisateurs.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### MCD (Mocodo)
+FOLLOW, 0N Users, 0N Users
+Users: id_user, name, email, password, created_at
+
+LIKE, 0N Users, 0N Posts
+
+POST, 0N Users, 11 Posts
+Posts: id_post, content, created_at
+
+---
+
+# ⚙ Installation
+
+```bash
+git clone https://github.com/andersemmanuel/Skystorm.git
+cd Skystorm
+composer run-script setup
+
+Configurer ensuite le fichier .env :
+base de données
+nom de l'application
+URL
+
+Puis exécuter :
+php artisan migrate
+php artisan serve
+
+📁 Structure du projet
+app/Models              # Modèles Eloquent
+app/Http/Controllers    # Logique métier
+resources/views         # Templates Blade
+database/migrations     # Schéma de base de données
+routes/web.php          # Routes principales
+📚 Contexte pédagogique
+
+Ce projet est réalisé dans le cadre de la formation BTS SIO SLAM afin de :
+
+comprendre le fonctionnement d’un framework moderne
+
+apprendre les bonnes pratiques Laravel
+
+utiliser Git dans un contexte professionnel
+
+📜 Licence
+
+Projet pédagogique.
+Utilisation libre dans un cadre scolaire ou de formation.
