@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="SkyStorm Logo" width="300">
+  <img src="C:\Users\ander\PhpstormProjects\php_cours\Skystorm\logo.png" alt="SkyStorm Logo" width="300">
 </p>
 
 # ⚡ SkyStorm
@@ -83,3 +83,24 @@ URL
 Puis exécuter :
 php artisan migrate
 php artisan serve
+
+📁 Structure du projet
+app/Models              # Modèles Eloquent
+app/Http/Controllers    # Logique métier
+resources/views         # Templates Blade
+database/migrations     # Schéma de base de données
+routes/web.php          # Routes principales
+📚 Contexte pédagogique
+
+Ce projet est réalisé dans le cadre de la formation BTS SIO SLAM afin de :
+
+comprendre le fonctionnement d’un framework moderne
+
+apprendre les bonnes pratiques Laravel
+
+utiliser Git dans un contexte professionnel
+
+📜 Licence
+
+Projet pédagogique.
+Utilisation libre dans un cadre scolaire ou de formation.
