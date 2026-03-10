@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Skystorm\logo.png" alt="SkyStorm Logo" width="300">
+  <img src="logo.png" alt="SkyStorm Logo" width="300">
 </p>
 
 # ⚡ SkyStorm
